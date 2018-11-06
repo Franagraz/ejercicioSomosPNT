@@ -1,0 +1,38 @@
+package ejercicio;
+
+public abstract class Producto implements Comparable<Producto> {
+	private String nombre;
+	private int precio;
+
+	public Producto(String nombre, int precio) {
+		super();
+		this.setNombre(nombre);
+		this.setPrecio(precio);
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public int getPrecio() {
+		return precio;
+	}
+
+	public void setPrecio(int precio) {
+		this.precio = precio;
+	}
+
+	public int compareTo(Producto p) {
+		if (this.precio < p.getPrecio()) {
+			return -1;
+		} else if (this.precio > p.getPrecio()) {
+			return 1;
+		} else
+			return 0;
+	}
+
+}
